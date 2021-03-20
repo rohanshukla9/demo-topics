@@ -14,6 +14,9 @@ class Topic extends Model
 
 
     protected $fillable = ['name', 'slug'];
+
+
+
     public function scopeFilter(Builder $builder, $request, array $filters = [])
     {
         # code...

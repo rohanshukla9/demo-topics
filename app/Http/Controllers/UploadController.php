@@ -13,7 +13,7 @@ class UploadController extends Controller
     {
         $upload = $request->file('file');
 
-        Storage::disk('s3')->put('exssss', $upload);
+        Storage::disk('s3_customers')->put('/', $upload);
 
         return back();
     }

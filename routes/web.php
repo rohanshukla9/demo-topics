@@ -54,4 +54,8 @@ Route::get('/', function () {
 
 Route::get('upload', [HomeController::class, 'uploadForm']);
 
-Route::post('upload', [UploadController::class, 'store'])->name('uploads.store');
+Route::post('upload', [HomeController::class, 'store'])->name('uploads.store');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Topic;
 use Illuminate\Http\Request;
 
-class TopicController extends Controller
+class TopicController extends Controllers
 {
     //
 
@@ -14,3 +14,4 @@ class TopicController extends Controller
         return Topic::with('children')->filter($request)->get();
     }
 }
+	
